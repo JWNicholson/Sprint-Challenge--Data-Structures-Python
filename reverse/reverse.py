@@ -38,5 +38,11 @@ class LinkedList:
 
         return False
 
+# Initialize pointers - previous and nade as None, current_node as self.head
+# Iterate through the linked list
+# set next incoming node as the current next node.The old current node is now the previous node
+# previous node becomes the current_node and current_node becomes the next node
+# head moves to the previous node - that means backwards (thats why its called reversal)
+
     def reverse_list(self, node, prev):
         pass
