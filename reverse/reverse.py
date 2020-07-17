@@ -38,7 +38,7 @@ class LinkedList:
 
         return False
 
-# The following gets me a while loop whick is wrong for requriments!!!
+# The following gets me a while loop which is wrong for requriments-
 # Initialize pointers - previous and nade as None, current_node as self.head
 # Iterate through the linked list
 # set next incoming node as the current next node.The old current node is now the previous node
