@@ -38,11 +38,36 @@ class LinkedList:
 
         return False
 
+# The following gets me a while loop whick is wrong for requriments!!!
 # Initialize pointers - previous and nade as None, current_node as self.head
 # Iterate through the linked list
 # set next incoming node as the current next node.The old current node is now the previous node
 # previous node becomes the current_node and current_node becomes the next node
 # head moves to the previous node - that means backwards (thats why its called reversal)
 
-    def reverse_list(self, node, prev):
-        pass
+    # def reverse_list(self, node, prev):
+    #         prev = None
+    #         node = None
+    #         current_node = self.head
+
+    #         while current_node is not None:
+    #             next = current_node.next_node
+    #             current_node.next_node = prev
+    #             prev = current_node
+    #             current_node = next
+    #             self.head = prev
+    #         return prev
+
+    def reverse_list(self, node, prev=None):
+        #if node is None
+        if not node:
+            return
+
+        #yes node
+        if node.get_next():
+            self.reverse_list(node.get_next(), node)
+
+        else:
+            self.head = node
+
+        node.set_next(prev)
